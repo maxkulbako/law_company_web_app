@@ -1,0 +1,49 @@
+@import "reset";
+@import "variables";
+
+.header {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 50px 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper_logo {
+  display: flex;
+
+  .header_logo {
+    width: 130px;
+    height: 60px;
+    background: url("../images/Logo.png");
+  }
+  div {
+    width: 21px;
+    height: 47px;
+    margin: 0 4px;
+    background: url("../images/Slash.png");
+  }
+  p {
+    font-weight: $font-regular;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-main-regular;
+  }
+}
+
+.contacts {
+  display: flex;
+  .wrapper_languages{
+    a {
+      font-weight: $font-bold;
+      font-size: 12px;
+      line-height: 14.63px;
+      text-align: center;
+      color: $color-grey-text;
+    }
+  }
+}
+
+nav ul{
+  display: flex;
+}
