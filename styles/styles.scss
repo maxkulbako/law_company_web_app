@@ -1,16 +1,65 @@
 @import "reset";
 @import "variables";
 
+@mixin button {
+  width: 45px;
+  height: 45px;
+  //background: url("../images/icons/Button.svg");
+  background: grey url("../images/icons/Button.svg") center no-repeat;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+}
+
+
+.wrapper_section_header {
+
+}
+
 .header {
-  max-width: 1440px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 50px 60px 0;
+  padding: 50px 160px 0;
   display: grid;
+  position: relative;
   grid-template-columns: auto auto;
   grid-template-rows: 50% 50%;
   grid-template-areas:
   "logo contacts"
   "logo nav";
+  .wrapper_logo_big {
+    position: absolute;
+    width: 872px;
+    height: 1000px;
+    padding: 30px;
+    background: url("../images/icons/Symbol.svg");
+    top:50%;
+    left:50%;
+    transform:translate(-50%, 0%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "." 'text' 'button';
+    align-items: center;
+    justify-items: center;
+
+    p {
+      font-weight: $font-bold;
+      font-size: 38px;
+      text-align: center;
+      grid-area: text;
+      //color: #FFFFFF;
+    }
+    button  {
+      @include button;
+      grid-area: button;
+      align-self: end;
+      &:hover {
+        background: url("../images/icons/Button_accent.png") center no-repeat;
+      }
+    }
+  }
   nav {
     grid-area: nav;
   }
