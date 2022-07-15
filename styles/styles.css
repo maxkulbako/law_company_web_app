@@ -7,56 +7,27 @@
   font-family: "Montserat", sans-serif;
 }
 
-.header {
+.wrapper_section_header {
+  max-width: 1600px;
+  margin: 0 auto;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+.wrapper_section_header .header {
   max-width: 1600px;
   margin: 0 auto;
   padding: 50px 160px 0;
   display: grid;
-  position: relative;
   grid-template-columns: auto auto;
   grid-template-rows: 50% 50%;
   grid-template-areas: "logo contacts" "logo nav";
 }
-.header .wrapper_logo_big {
-  position: absolute;
-  width: 872px;
-  height: 1000px;
-  padding: 30px;
-  background: url("../images/icons/Symbol.svg");
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "." "text" "button";
-  align-items: center;
-  justify-items: center;
+@media screen and (max-width: 1440px) {
+  .wrapper_section_header .header {
+    padding: 50px 60px 0;
+  }
 }
-.header .wrapper_logo_big p {
-  font-weight: 700;
-  font-size: 38px;
-  text-align: center;
-  grid-area: text;
-}
-.header .wrapper_logo_big button {
-  width: 45px;
-  height: 45px;
-  background: grey url("../images/icons/Button.svg") center no-repeat;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  grid-area: button;
-  align-self: end;
-}
-.header .wrapper_logo_big button:hover {
-  background: url("../images/icons/Button_accent.png") center no-repeat;
-}
-.header nav {
-  grid-area: nav;
-}
-@media all and (max-width: 992px) {
-  .header {
+@media screen and (max-width: 768px) {
+  .wrapper_section_header .header {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "contacts" "logo" "nav";
@@ -64,31 +35,44 @@
     row-gap: 30px;
   }
 }
-@media screen and (max-width: 592px) {
-  .header {
-    padding: 10px 15px 0;
+@media screen and (max-width: 588px) {
+  .wrapper_section_header .header {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: unset;
+    gap: 0;
+    grid-template-areas: "contacts contacts" "logo nav";
+    padding: 0;
   }
 }
+
 .wrapper_logo {
   display: flex;
+  padding: 3px 0;
   grid-area: logo;
+}
+@media screen and (max-width: 768px) {
+  .wrapper_logo {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 588px) {
+  .wrapper_logo {
+    padding-left: 15px;
+  }
 }
 .wrapper_logo .header_logo {
   width: 130px;
   height: 60px;
-  background: url("../images/Logo.png") no-repeat center;
+  background: url("../images/Logo_white.png") no-repeat center;
 }
-.wrapper_logo div {
-  width: 21px;
-  height: 47px;
-  margin: 0 4px;
-  background: url("../images/Slash.png");
-}
-.wrapper_logo p {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
-  color: #323264;
+@media screen and (max-width: 588px) {
+  .wrapper_logo .header_logo {
+    width: 69px;
+    height: 32px;
+    margin: 15px 0 10px 0;
+    background-size: contain;
+  }
 }
 
 .contacts {
@@ -96,6 +80,14 @@
   align-items: center;
   justify-content: end;
   grid-area: contacts;
+}
+@media screen and (max-width: 588px) {
+  .contacts {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(245, 245, 250, 0.2);
+  }
 }
 .contacts .wrapper_languages a {
   width: 33px;
@@ -106,7 +98,7 @@
   font-size: 12px;
   line-height: 14.63px;
   text-align: center;
-  color: #B3B3BA;
+  color: rgb(255, 255, 255);
   border-radius: 8px;
   letter-spacing: 1px;
 }
@@ -121,31 +113,57 @@
   border-radius: 50%;
   margin: 9.5px 6px;
 }
+@media screen and (max-width: 588px) {
+  .contacts .separate {
+    display: none;
+  }
+}
 .contacts p {
   font-weight: 400;
   font-size: 16px;
-  color: #B3B3BA;
+  color: rgb(255, 255, 255);
   text-align: center;
+}
+@media screen and (max-width: 588px) {
+  .contacts p {
+    display: none;
+  }
 }
 .contacts a {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #B3B3BA;
+  color: rgb(255, 255, 255);
 }
-.contacts a:last-child svg {
+@media screen and (max-width: 588px) {
+  .contacts .social_media_icon {
+    display: none;
+  }
+}
+.contacts .social_media_icon svg {
   display: inline-block;
   width: 24px;
   height: 24px;
-  color: #B3B3BA;
+  color: rgb(255, 255, 255);
   transition: 0.3s ease-in;
 }
-.contacts a:last-child svg:hover {
+@media screen and (max-width: 588px) {
+  .contacts .social_media_icon svg {
+    display: none;
+  }
+}
+.contacts .social_media_icon svg:hover {
   color: #F0145A;
 }
 
 nav {
   align-self: end;
+  grid-area: nav;
+}
+@media screen and (max-width: 588px) {
+  nav {
+    display: none;
+  }
 }
 
 nav ul {
@@ -160,11 +178,53 @@ nav ul a {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #24A3FF;
+  color: rgb(255, 255, 255);
 }
-nav ul li:first-child a {
-  color: #F0145A;
-  border-bottom: 2px solid #F0145A;
+
+.burger {
+  display: none;
+}
+@media screen and (max-width: 588px) {
+  .burger {
+    display: block;
+    grid-area: nav;
+    justify-self: end;
+    align-self: center;
+    margin-right: 15px;
+  }
+}
+
+.wrapper_logo_big {
+  width: 872px;
+  height: 1000px;
+  margin: -116px auto 0;
+  padding: 0 30px 30px 30px;
+  background: url("../images/icons/Symbol.svg");
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "." "text" "button";
+  align-items: center;
+  justify-items: center;
+}
+.wrapper_logo_big p {
+  font-weight: 700;
+  font-size: 38px;
+  text-align: center;
+  grid-area: text;
+}
+.wrapper_logo_big button {
+  width: 45px;
+  height: 45px;
+  background: grey url("../images/icons/Button.svg") center no-repeat;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  grid-area: button;
+  align-self: end;
+}
+.wrapper_logo_big button:hover {
+  background: url("../images/icons/Button_accent.png") center no-repeat;
 }
 
 /*# sourceMappingURL=styles.css.map */

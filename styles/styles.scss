@@ -12,171 +12,225 @@
 
 }
 
-
 .wrapper_section_header {
-
-}
-
-.header {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 50px 160px 0;
-  display: grid;
-  position: relative;
-  grid-template-columns: auto auto;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-  "logo contacts"
-  "logo nav";
-  .wrapper_logo_big {
-    position: absolute;
-    width: 872px;
-    height: 1000px;
-    padding: 30px;
-    background: url("../images/icons/Symbol.svg");
-    top:50%;
-    left:50%;
-    transform:translate(-50%, 0%);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "." 'text' 'button';
-    align-items: center;
-    justify-items: center;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 
-    p {
-      font-weight: $font-bold;
-      font-size: 38px;
-      text-align: center;
-      grid-area: text;
-      //color: #FFFFFF;
+  .header {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px 160px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "logo contacts"
+    "logo nav";
+
+    @media screen and (max-width: 1440px) {
+      padding: 50px 60px 0;
     }
-    button  {
-      @include button;
-      grid-area: button;
-      align-self: end;
-      &:hover {
-        background: url("../images/icons/Button_accent.png") center no-repeat;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "contacts" "logo" "nav";
+      justify-items: start;
+      row-gap: 30px;
+    }
+    @media screen and (max-width: 588px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      justify-items: unset;
+      gap: 0;
+      grid-template-areas:
+      "contacts contacts"
+      "logo nav";
+      padding: 0;
+    }
+
+  }
+}
+    .wrapper_logo {
+      display: flex;
+      padding: 3px 0;
+      grid-area: logo;
+      @media screen and (max-width: 768px) {
+        padding: 0;
+      }
+      @media screen and (max-width: 588px) {
+        padding-left: 15px;
+      }
+
+      .header_logo {
+        width: 130px;
+        height: 60px;
+        background: url("../images/Logo_white.png") no-repeat center;
+
+        @media screen and (max-width: 588px) {
+          width: 69px;
+          height: 32px;
+          margin: 15px 0 10px 0;
+          background-size: contain;
+        }
       }
     }
-  }
-  nav {
-    grid-area: nav;
-  }
-  @media all and (max-width: 992px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: "contacts" "logo" "nav";
-    justify-items: start;
-    row-gap: 30px;
-  }
 
-  @media screen and (max-width: 592px) {
-    padding: 10px 15px 0;;
-  }
-  
-  @media screen and (max-width: 500px){
-    
-  }
-}
+    .contacts {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      grid-area: contacts;
+      @media screen and (max-width: 588px) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background: rgba(245, 245, 250, 0.2);
 
-.wrapper_logo {
-  display: flex;
-  grid-area: logo;
+      }
 
-  .header_logo {
-    width: 130px;
-    height: 60px;
-    background: url("../images/Logo.png") no-repeat center;
+
+      .wrapper_languages {
+        a {
+          width: 33px;
+          height: 25px;
+          padding: 5px 7px;
+          display: inline-block;
+          font-weight: $font-bold;
+          font-size: 12px;
+          line-height: 14.63px;
+          text-align: center;
+          color: $basic-white;
+          border-radius: 8px;
+          letter-spacing: 1px;
+        }
+
+        a:nth-child(3) {
+          background: $color-accent;
+          color: #F5F5FA;
+        }
+      }
+
+      .separate {
+        width: 6px;
+        height: 6px;
+        background: $color-grey-separator no-repeat center;
+        border-radius: 50%;
+        margin: 9.5px 6px;
+        @media screen and (max-width: 588px) {
+          display: none;
+        }
+      }
+
+      p {
+        font-weight: $font-regular;
+        font-size: 16px;
+        color: $basic-white;
+        text-align: center;
+        @media screen and (max-width: 588px) {
+          display: none;
+        }
+      }
+
+      a {
+        font-weight: $font-bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: $basic-white;
+
+      }
+
+      .social_media_icon {
+        @media screen and (max-width: 588px) {
+          display: none;
+        }
+      }
+
+      .social_media_icon svg {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        color: $basic-white ;
+        transition: 0.3s ease-in;
+        @media screen and (max-width: 588px) {
+          display: none;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    nav {
+      align-self: end;
+      grid-area: nav;
+
+      @media screen and (max-width: 588px) {
+        display: none;
+      }
+    }
+
+      nav ul {
+      display: flex;
+      gap: 15px;
+      justify-content: end;
+
+      a {
+        padding: 3px 0;
+        cursor: pointer;
+        font-weight: $font-bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: $basic-white;
+
+      }
+    }
+
+    .burger {
+      display: none;
+      @media screen and (max-width: 588px) {
+        display: block;
+        grid-area: nav;
+        justify-self: end;
+        align-self: center;
+        margin-right: 15px;
+      }
 
     }
-  div {
-    width: 21px;
-    height: 47px;
-    margin: 0 4px;
-    background: url("../images/Slash.png");
-  }
-  p {
-    font-weight: $font-regular;
-    font-size: 36px;
-    line-height: 44px;
-    color: $color-main-regular;
-  }
-}
 
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  grid-area: contacts;
-  .wrapper_languages{
-    a {
-      width: 33px;
-      height: 25px;
-      padding: 5px 7px;
-      display: inline-block;
-      font-weight: $font-bold;
-      font-size: 12px;
-      line-height: 14.63px;
-      text-align: center;
-      color: $color-grey-text;
-      border-radius: 8px;
-      letter-spacing: 1px;
-    }
-    a:nth-child(3) {
-      background: $color-accent;
-      color: #F5F5FA;
-    }
-  }
-  .separate {
-    width: 6px;
-    height: 6px;
-    background: $color-grey-separator no-repeat center;
-    border-radius: 50%;
-    margin: 9.5px 6px;
-  }
-  p {
-    font-weight: $font-regular;
-    font-size: 16px;
-    color: $color-grey-text;
-    text-align: center;
-  }
-  a {
-    font-weight: $font-bold;
-    font-size: 16px;
-    line-height: 20px;
-    color: $color-grey-text;
-  }
-  a:last-child svg{
-  display: inline-block;
-    width: 24px;
-    height: 24px;
-    color: $color-grey-text;
-    transition: 0.3s ease-in;
-    &:hover {
-      color: $color-accent;
-    }
-  }
-}
-nav {
-  align-self: end;
-}
-nav ul{
-  display: flex;
-  gap: 15px;
-  justify-content: end;
 
-  a {
-    padding: 3px 0;
-    cursor: pointer;
-    font-weight: $font-bold;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: $color-active-regular;
-  }
-  li:first-child a {
-    color: $color-accent;
-    border-bottom: 2px solid $color-accent;
-  }
-}
+
+
+    .wrapper_logo_big {
+      width: 872px;
+      height: 1000px;
+      margin: -116px auto 0;
+      padding: 0 30px 30px 30px;
+      background: url("../images/icons/Symbol.svg");
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "." 'text' 'button';
+      align-items: center;
+      justify-items: center;
+
+      p {
+        font-weight: $font-bold;
+        font-size: 38px;
+        text-align: center;
+        grid-area: text;
+        //color: #FFFFFF;
+      }
+
+      button {
+        @include button;
+        grid-area: button;
+        align-self: end;
+
+        &:hover {
+          background: url("../images/icons/Button_accent.png") center no-repeat;
+        }
+      }
+    }

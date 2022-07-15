@@ -1,0 +1,142 @@
+@import "variables";
+
+.header {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px 160px 0;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+  "logo contacts"
+  "logo nav";
+
+  button  {
+    @include button;
+    grid-area: button;
+    align-self: end;
+    &:hover {
+      background: url("../images/icons/Button_accent.png") center no-repeat;
+    }
+  }
+}
+nav {
+  grid-area: nav;
+}
+@media all and (max-width: 992px) {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "contacts" "logo" "nav";
+  justify-items: start;
+  row-gap: 30px;
+}
+
+@media screen and (max-width: 592px) {
+  padding: 10px 15px 0;;
+}
+
+@media screen and (max-width: 500px){
+
+}
+
+.wrapper_logo {
+  display: flex;
+  grid-area: logo;
+
+  .header_logo {
+    width: 130px;
+    height: 60px;
+    background: url("../images/Logo.png") no-repeat center;
+
+  }
+  div {
+    width: 21px;
+    height: 47px;
+    margin: 0 4px;
+    background: url("../images/Slash.png");
+  }
+  p {
+    font-weight: $font-regular;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-main-regular;
+  }
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  grid-area: contacts;
+  .wrapper_languages{
+    a {
+      width: 33px;
+      height: 25px;
+      padding: 5px 7px;
+      display: inline-block;
+      font-weight: $font-bold;
+      font-size: 12px;
+      line-height: 14.63px;
+      text-align: center;
+      color: $color-grey-text;
+      border-radius: 8px;
+      letter-spacing: 1px;
+    }
+    a:nth-child(3) {
+      background: $color-accent;
+      color: #F5F5FA;
+    }
+  }
+  .separate {
+    width: 6px;
+    height: 6px;
+    background: $color-grey-separator no-repeat center;
+    border-radius: 50%;
+    margin: 9.5px 6px;
+  }
+  p {
+    font-weight: $font-regular;
+    font-size: 16px;
+    color: $color-grey-text;
+    text-align: center;
+  }
+  a {
+    font-weight: $font-bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-grey-text;
+  }
+  a:last-child svg{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: $color-grey-text;
+    transition: 0.3s ease-in;
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+nav {
+  align-self: end;
+}
+nav ul{
+  display: flex;
+  gap: 15px;
+  justify-content: end;
+
+  a {
+    padding: 3px 0;
+    cursor: pointer;
+    font-weight: $font-bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $color-active-regular;
+  }
+  li:first-child a {
+    color: $color-accent;
+    border-bottom: 2px solid $color-accent;
+  }
+}
