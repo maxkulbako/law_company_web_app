@@ -11,6 +11,8 @@
   max-width: 1600px;
   margin: 0 auto;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  z-index: -2;
+  position: relative;
 }
 .wrapper_section_header .header {
   max-width: 1600px;
@@ -199,32 +201,49 @@ nav ul a {
   height: 1000px;
   margin: -116px auto 0;
   padding: 0 30px 30px 30px;
-  background: url("../images/icons/Symbol.svg");
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "." "text" "button";
   align-items: center;
   justify-items: center;
+  position: relative;
+  z-index: -1;
 }
-.wrapper_logo_big p {
-  font-weight: 700;
-  font-size: 38px;
-  text-align: center;
-  grid-area: text;
+@media screen and (max-width: 1440px) {
+  .wrapper_logo_big {
+    width: 697px;
+    height: 799px;
+  }
 }
-.wrapper_logo_big button {
-  width: 45px;
-  height: 45px;
-  background: grey url("../images/icons/Button.svg") center no-repeat;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  grid-area: button;
-  align-self: end;
+@media screen and (max-width: 1024px) {
+  .wrapper_logo_big {
+    width: 670px;
+    height: 768px;
+  }
 }
-.wrapper_logo_big button:hover {
-  background: url("../images/icons/Button_accent.png") center no-repeat;
+@media screen and (max-width: 768px) {
+  .wrapper_logo_big {
+    width: 100%;
+    height: 1024px;
+    margin-top: -219px;
+  }
+}
+.wrapper_logo_big .logo_big {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/icons/Symbol.svg") center no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .wrapper_logo_big .logo_big {
+    width: 893px;
+    height: 1024px;
+    left: -64px;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
