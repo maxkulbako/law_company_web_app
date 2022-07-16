@@ -11,8 +11,6 @@
   max-width: 1600px;
   margin: 0 auto;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  z-index: -2;
-  position: relative;
 }
 .wrapper_section_header .header {
   max-width: 1600px;
@@ -22,6 +20,8 @@
   grid-template-columns: auto auto;
   grid-template-rows: 50% 50%;
   grid-template-areas: "logo contacts" "logo nav";
+  position: relative;
+  z-index: 5;
 }
 @media screen and (max-width: 1440px) {
   .wrapper_section_header .header {
@@ -104,6 +104,9 @@
   border-radius: 8px;
   letter-spacing: 1px;
 }
+.contacts .wrapper_languages a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 .contacts .wrapper_languages a:nth-child(3) {
   background: #F0145A;
   color: #F5F5FA;
@@ -181,6 +184,29 @@ nav ul a {
   line-height: 20px;
   text-align: center;
   color: rgb(255, 255, 255);
+  position: relative;
+}
+nav ul a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #F0145A;
+  transition: 0.7s;
+}
+nav ul a:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.7s;
 }
 
 .burger {
@@ -208,7 +234,6 @@ nav ul a {
   align-items: center;
   justify-items: center;
   position: relative;
-  z-index: -1;
 }
 @media screen and (max-width: 1440px) {
   .wrapper_logo_big {
@@ -218,15 +243,21 @@ nav ul a {
 }
 @media screen and (max-width: 1024px) {
   .wrapper_logo_big {
-    width: 670px;
+    width: 100%;
     height: 768px;
   }
 }
 @media screen and (max-width: 768px) {
   .wrapper_logo_big {
-    width: 100%;
     height: 1024px;
     margin-top: -219px;
+  }
+}
+@media screen and (max-width: 588px) {
+  .wrapper_logo_big {
+    width: 100%;
+    height: 600px;
+    margin-top: -102px;
   }
 }
 .wrapper_logo_big .logo_big {
@@ -238,12 +269,50 @@ nav ul a {
 }
 @media screen and (max-width: 768px) {
   .wrapper_logo_big .logo_big {
-    width: 893px;
-    height: 1024px;
-    left: -64px;
     background-attachment: fixed;
     background-size: cover;
+    width: 893px;
   }
+}
+@media screen and (max-width: 588px) {
+  .wrapper_logo_big .logo_big {
+    background-attachment: unset;
+    width: 100%;
+  }
+}
+.wrapper_logo_big p {
+  font-weight: 700;
+  font-size: 38px;
+  text-align: center;
+  grid-area: text;
+  color: rgb(255, 255, 255);
+  z-index: 0;
+}
+@media screen and (max-width: 588px) {
+  .wrapper_logo_big p {
+    padding: 0 80px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .wrapper_logo_big p {
+    padding: 0;
+  }
+}
+.wrapper_logo_big button {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  grid-area: button;
+  align-self: end;
+  z-index: 10;
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+.wrapper_logo_big button:hover {
+  color: #F0145A;
 }
 
 /*# sourceMappingURL=styles.css.map */
