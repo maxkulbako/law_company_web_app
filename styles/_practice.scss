@@ -1,0 +1,8 @@
+@import "variables";
+
+@mixin practice {
+  width: 92px;
+  height: 92px;
+  background: url("../images/icons/Icon_it.svg") $basic-white;
+  border-radius: 24px;
+}

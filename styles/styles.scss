@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "practice";
 
 @mixin button {
   width: 45px;
@@ -12,12 +13,14 @@
 }
 
 .wrapper_section_header {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 
   .header {
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 50px 160px 0;
     display: grid;
@@ -266,7 +269,6 @@
         background: url("../images/icons/Symbol.svg") center no-repeat;
         background-size: contain;
         @media screen and (max-width: 768px) {
-          background-attachment: fixed;
           background-size: cover;
           width: 893px;
         }
@@ -412,3 +414,150 @@
       }
 
     }
+
+.wrapper_practice {
+  padding: 60px 160px 60px 160px;
+  display: grid;
+  row-gap: 60px;
+  column-gap: 60px;
+  grid-template-areas: 'title title title' 'it daily corporate' 'contractual protection judicial';
+
+  @media screen and (max-width: 1205px) {
+    padding: 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-areas: 'title title ' 'it daily' 'corporate contractual' 'protection judicial';
+
+  }
+  @media screen and (max-width: 588px) {
+    grid-template-areas: 'title' 'it' 'daily' 'corporate' 'contractual' 'protection' 'judicial';
+    padding: 30px;
+  }
+
+  .practice_title {
+    grid-area: title;
+
+    a {
+      font-size: 14px;
+      font-weight: $font-bold;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active-regular;
+      padding-right: 14px;
+      position: relative;
+      cursor: pointer;
+
+      svg {
+       position: absolute;
+       top: 1px;
+       right: 0;
+      }
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: $font-bold;
+      line-height: 46px;
+      text-align: left;
+      background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      padding-top: 10px;
+
+      @media screen and (max-width: 588px) {
+       font-size: 30px;
+       line-height: 36.57px;
+      }
+    }
+  }
+  .practice_it {
+    grid-area: it;
+
+    div {
+      @include practice;
+    }
+    h4 {
+      font-size: 22px;
+      font-weight: $font-bold;
+      line-height: 27px;
+      color: $color-active-regular;
+      padding-top: 30px;
+
+    }
+    p {
+      font-size: 16px;
+      font-weight: $font-regular;
+      line-height: 26px;
+      padding-top: 15px;
+      color: $basic-white;
+    }
+  }
+
+  .practice_daily {
+    grid-area: daily;
+    @extend .practice_it;
+    div {
+      background: url("../images/icons/Icon_daily.svg") $basic-white center no-repeat;
+    }
+  }
+  .practice_corporate {
+    grid-area: corporate;
+    @extend .practice_it;
+
+    div {
+      background: url("../images/icons/Icon_coprorate.png") $basic-white center no-repeat;
+    }
+  }
+  .practice_contractual {
+    grid-area: contractual;
+    @extend .practice_it;
+
+    div {
+      background: url("../images/icons/Icon_trust.png") $basic-white center no-repeat;
+    }
+  }
+  .practice_protection {
+    grid-area: protection;
+    @extend .practice_it;
+
+    div {
+      background: url("../images/icons/Icon_protection.png") $basic-white center no-repeat;
+    }
+  }
+  .practice_judicial {
+    grid-area: judicial;
+    @extend .practice_it;
+
+    div {
+      background: url("../images/icons/Icon_court.png") $basic-white center no-repeat;
+    }
+  }
+}
+
+.wrapper_header_shadow {
+  margin: 0 auto;
+  height: 10px;
+  background: rgba(202, 202, 219, 1);
+  display: block;
+  max-width: 1880px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  @media screen and (max-width: 1920px) {
+    width: calc(100vw - 40px);
+  }
+}
+
+.wrapper_header_shadow2 {
+    @extend .wrapper_header_shadow;
+    max-width: 1840px;
+    background: rgba(231, 231, 242, 1);
+  @media screen and (max-width: 1920px) {
+      width: calc(100vw - 80px);
+    }
+  }

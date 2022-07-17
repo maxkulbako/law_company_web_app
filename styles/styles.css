@@ -8,12 +8,14 @@
 }
 
 .wrapper_section_header {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 .wrapper_section_header .header {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 50px 160px 0;
   display: grid;
@@ -269,7 +271,6 @@ nav ul a:hover:after {
 }
 @media screen and (max-width: 768px) {
   .wrapper_logo_big .logo_big {
-    background-attachment: fixed;
     background-size: cover;
     width: 893px;
   }
@@ -422,6 +423,146 @@ nav ul a:hover:after {
   line-height: 30px;
   color: rgb(255, 255, 255);
   padding-top: 30px;
+}
+
+.wrapper_practice {
+  padding: 60px 160px 60px 160px;
+  display: grid;
+  row-gap: 60px;
+  column-gap: 60px;
+  grid-template-areas: "title title title" "it daily corporate" "contractual protection judicial";
+}
+@media screen and (max-width: 1205px) {
+  .wrapper_practice {
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper_practice {
+    grid-template-areas: "title title " "it daily" "corporate contractual" "protection judicial";
+  }
+}
+@media screen and (max-width: 588px) {
+  .wrapper_practice {
+    grid-template-areas: "title" "it" "daily" "corporate" "contractual" "protection" "judicial";
+    padding: 30px;
+  }
+}
+.wrapper_practice .practice_title {
+  grid-area: title;
+}
+.wrapper_practice .practice_title a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24A3FF;
+  padding-right: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.wrapper_practice .practice_title a svg {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+.wrapper_practice .practice_title a:hover {
+  color: #F0145A;
+}
+.wrapper_practice .practice_title h2 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: left;
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding-top: 10px;
+}
+@media screen and (max-width: 588px) {
+  .wrapper_practice .practice_title h2 {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
+.wrapper_practice .practice_it, .wrapper_practice .practice_judicial, .wrapper_practice .practice_protection, .wrapper_practice .practice_contractual, .wrapper_practice .practice_corporate, .wrapper_practice .practice_daily {
+  grid-area: it;
+}
+.wrapper_practice .practice_it div, .wrapper_practice .practice_judicial div, .wrapper_practice .practice_protection div, .wrapper_practice .practice_contractual div, .wrapper_practice .practice_corporate div, .wrapper_practice .practice_daily div {
+  width: 92px;
+  height: 92px;
+  background: url("../images/icons/Icon_it.svg") rgb(255, 255, 255);
+  border-radius: 24px;
+}
+.wrapper_practice .practice_it h4, .wrapper_practice .practice_judicial h4, .wrapper_practice .practice_protection h4, .wrapper_practice .practice_contractual h4, .wrapper_practice .practice_corporate h4, .wrapper_practice .practice_daily h4 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #24A3FF;
+  padding-top: 30px;
+}
+.wrapper_practice .practice_it p, .wrapper_practice .practice_judicial p, .wrapper_practice .practice_protection p, .wrapper_practice .practice_contractual p, .wrapper_practice .practice_corporate p, .wrapper_practice .practice_daily p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  padding-top: 15px;
+  color: rgb(255, 255, 255);
+}
+.wrapper_practice .practice_daily {
+  grid-area: daily;
+}
+.wrapper_practice .practice_daily div {
+  background: url("../images/icons/Icon_daily.svg") rgb(255, 255, 255) center no-repeat;
+}
+.wrapper_practice .practice_corporate {
+  grid-area: corporate;
+}
+.wrapper_practice .practice_corporate div {
+  background: url("../images/icons/Icon_coprorate.png") rgb(255, 255, 255) center no-repeat;
+}
+.wrapper_practice .practice_contractual {
+  grid-area: contractual;
+}
+.wrapper_practice .practice_contractual div {
+  background: url("../images/icons/Icon_trust.png") rgb(255, 255, 255) center no-repeat;
+}
+.wrapper_practice .practice_protection {
+  grid-area: protection;
+}
+.wrapper_practice .practice_protection div {
+  background: url("../images/icons/Icon_protection.png") rgb(255, 255, 255) center no-repeat;
+}
+.wrapper_practice .practice_judicial {
+  grid-area: judicial;
+}
+.wrapper_practice .practice_judicial div {
+  background: url("../images/icons/Icon_court.png") rgb(255, 255, 255) center no-repeat;
+}
+
+.wrapper_header_shadow, .wrapper_header_shadow2 {
+  margin: 0 auto;
+  height: 10px;
+  background: rgb(202, 202, 219);
+  display: block;
+  max-width: 1880px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media screen and (max-width: 1920px) {
+  .wrapper_header_shadow, .wrapper_header_shadow2 {
+    width: calc(100vw - 40px);
+  }
+}
+
+.wrapper_header_shadow2 {
+  max-width: 1840px;
+  background: rgb(231, 231, 242);
+}
+@media screen and (max-width: 1920px) {
+  .wrapper_header_shadow2 {
+    width: calc(100vw - 80px);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
