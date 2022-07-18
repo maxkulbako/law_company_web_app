@@ -13,6 +13,7 @@
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  overflow: hidden;
 }
 .wrapper_section_header .header {
   max-width: 1920px;
@@ -562,6 +563,140 @@ nav ul a:hover:after {
 @media screen and (max-width: 1920px) {
   .wrapper_header_shadow2 {
     width: calc(100vw - 80px);
+  }
+}
+
+.section_clients {
+  margin-top: 60px;
+}
+.section_clients h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.section_clients .wrapper_clients {
+  display: grid;
+  width: 1720px;
+  height: 360px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: auto;
+  grid-template-areas: "hillel wannabiz tapgerine dlook" "orangear adtelligent clickky eco" "infatek citypark art ultimate";
+}
+@media screen and (max-width: 1720px) {
+  .section_clients .wrapper_clients {
+    width: 100vw;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 988px) {
+  .section_clients .wrapper_clients {
+    height: 480px;
+    grid-template-areas: "hillel wannabiz tapgerine" "dlook orangear adtelligent" "clickky eco infatek" "citypark art ultimate";
+  }
+}
+@media screen and (max-width: 726px) {
+  .section_clients .wrapper_clients {
+    height: 720px;
+    grid-template-areas: "hillel wannabiz" "tapgerine dlook" "orangear adtelligent" "clickky eco" "infatek citypark" "art ultimate";
+  }
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients {
+    height: 720px;
+    grid-template-areas: "hillel" "wannabiz" "tapgerine" "dlook" "orangear" "adtelligent";
+  }
+}
+.section_clients .wrapper_clients .client {
+  background: center no-repeat;
+}
+.section_clients .wrapper_clients .client_hillel {
+  width: 100%;
+  height: 100%;
+  grid-area: hillel;
+  background: url("../images/icons/clients/hillel.svg") #1C4280 center no-repeat;
+}
+.section_clients .wrapper_clients .client_wannabiz {
+  grid-area: wannabiz;
+  background: url("../images/icons/clients/wannabiz.svg") #143646 center no-repeat;
+}
+.section_clients .wrapper_clients .client_tapgerine {
+  grid-area: tapgerine;
+  background: url("../images/icons/clients/tapgerine.svg") #F48B30 center no-repeat;
+}
+.section_clients .wrapper_clients .client_3dlook {
+  grid-area: dlook;
+  background: url("../images/icons/clients/3dlook.svg") #9E4DC3 center no-repeat;
+}
+.section_clients .wrapper_clients .client_orangear {
+  grid-area: orangear;
+  background: url("../images/icons/clients/orangear.svg") #FD9339 center no-repeat;
+}
+.section_clients .wrapper_clients .client_adtelligent {
+  grid-area: adtelligent;
+  background: url("../images/icons/clients/addtelligent.svg") #E2E2E4 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_adtelligent {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_clickky {
+  grid-area: clickky;
+  background: url("../images/icons/clients/clickky.svg") #C71C36 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_clickky {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_eco {
+  grid-area: eco;
+  background: url("../images/icons/clients/ecolease.svg") #DCF3F9 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_eco {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_infatek {
+  grid-area: infatek;
+  background: url("../images/icons/clients/infatek.svg") #EAEAEA center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_infatek {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_citypark {
+  grid-area: citypark;
+  background: url("../images/icons/clients/citypark.svg") #282240 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_citypark {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_art {
+  grid-area: art;
+  background: url("../images/icons/clients/artprint.svg") #1D4568 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_art {
+    display: none;
+  }
+}
+.section_clients .wrapper_clients .client_ultimate {
+  grid-area: ultimate;
+  background: url("../images/icons/clients/logoM.svg") #000000 center no-repeat;
+}
+@media screen and (max-width: 500px) {
+  .section_clients .wrapper_clients .client_ultimate {
+    display: none;
   }
 }
 

@@ -18,6 +18,7 @@
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  overflow: hidden;
 
   .header {
     max-width: 1920px;
@@ -561,3 +562,137 @@
       width: calc(100vw - 80px);
     }
   }
+
+.section_clients {
+  margin-top: 60px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: $font-bold;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+  }
+
+  .wrapper_clients {
+    display: grid;
+    width: 1720px;
+    height: 360px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: auto;
+    grid-template-areas:
+          'hillel wannabiz tapgerine dlook'
+          'orangear adtelligent clickky eco'
+          'infatek citypark art ultimate';
+
+    @media screen and (max-width: 1720px) {
+      width: 100vw;
+      border-radius: 0;
+    }
+    @media screen and (max-width: 988px) {
+      height: 480px;
+      grid-template-areas:
+          'hillel wannabiz tapgerine'
+          'dlook orangear adtelligent'
+          'clickky eco infatek'
+          'citypark art ultimate';
+    }
+    @media screen and (max-width: 726px) {
+      height: 720px;
+      grid-template-areas:
+          'hillel wannabiz'
+          'tapgerine dlook'
+          'orangear adtelligent'
+          'clickky eco'
+          'infatek citypark'
+          'art ultimate';
+    }
+    @media screen and (max-width: 500px) {
+      height: 720px;
+      grid-template-areas:
+          'hillel' 'wannabiz'
+          'tapgerine' 'dlook'
+          'orangear' 'adtelligent';
+    }
+
+    .client {
+      background: center no-repeat;
+
+      &_hillel {
+        width: 100%;
+        height: 100%;
+        grid-area: hillel;
+        background: url("../images/icons/clients/hillel.svg") #1C4280 center no-repeat;
+      }
+      &_wannabiz {
+        grid-area: wannabiz;
+        background: url("../images/icons/clients/wannabiz.svg") #143646 center no-repeat;
+      }
+      &_tapgerine {
+        grid-area: tapgerine;
+        background: url("../images/icons/clients/tapgerine.svg") #F48B30 center no-repeat;
+      }
+      &_3dlook {
+        grid-area: dlook;
+        background: url("../images/icons/clients/3dlook.svg") #9E4DC3 center no-repeat;
+      }
+      &_orangear {
+        grid-area: orangear;
+        background: url("../images/icons/clients/orangear.svg") #FD9339 center no-repeat;
+      }
+      &_adtelligent {
+        grid-area: adtelligent;
+        background: url("../images/icons/clients/addtelligent.svg") #E2E2E4 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_clickky {
+        grid-area: clickky;
+        background: url("../images/icons/clients/clickky.svg") #C71C36 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_eco {
+        grid-area: eco;
+        background: url("../images/icons/clients/ecolease.svg") #DCF3F9 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_infatek {
+        grid-area: infatek;
+        background: url("../images/icons/clients/infatek.svg") #EAEAEA center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_citypark {
+        grid-area: citypark;
+        background: url("../images/icons/clients/citypark.svg") #282240 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_art {
+        grid-area: art;
+        background: url("../images/icons/clients/artprint.svg") #1D4568 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      &_ultimate {
+        grid-area: ultimate;
+        background: url("../images/icons/clients/logoM.svg") #000000 center no-repeat;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
