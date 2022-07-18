@@ -13,3 +13,45 @@ $basic-white: rgba(255, 255, 255, 1);
 $font-regular: 400;
 $font-bold: 700;
 
+@mixin title {
+  a {
+    font-size: 14px;
+    font-weight: $font-bold;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active-regular;
+    padding-right: 14px;
+    position: relative;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+      top: 1px;
+      right: 0;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  h2 {
+    font-size: 38px;
+    font-weight: $font-bold;
+    line-height: 46px;
+    text-align: left;
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding-top: 10px;
+
+    @media screen and (max-width: 588px) {
+      font-size: 30px;
+      line-height: 36.57px;
+    }
+  }
+}
+
+@mixin text_title {
+
+}
