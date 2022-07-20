@@ -841,4 +841,116 @@ nav ul a:hover:after {
   grid-area: public_3;
 }
 
+.section_footer {
+  width: 100vw;
+  background: #F5F5FA;
+  padding: 30px 0;
+}
+.section_footer footer {
+  max-width: 1600px;
+  width: calc(100% - 120px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "separate separate" "address trademark" "contacts contacts";
+}
+@media screen and (max-width: 674px) {
+  .section_footer footer {
+    grid-template-areas: "separate" "address" "contacts" "trademark";
+  }
+}
+@media screen and (max-width: 588px) {
+  .section_footer footer {
+    width: calc(100% - 60px);
+  }
+}
+.section_footer footer .footer_separate {
+  grid-area: separate;
+  width: 100%;
+  height: 2px;
+  margin: 0 auto 30px;
+  background-color: #E6E6F0;
+}
+.section_footer footer .separate {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #B3B3BA;
+  margin: auto 10px;
+}
+@media screen and (max-width: 674px) {
+  .section_footer footer .separate {
+    display: none;
+  }
+}
+.section_footer footer .footer_contacts_address {
+  grid-area: address;
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+}
+@media screen and (max-width: 674px) {
+  .section_footer footer .footer_contacts_address {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.section_footer footer .footer_contacts_address p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #323264;
+}
+.section_footer footer .footer_contacts_address a {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #24A3FF;
+  text-transform: uppercase;
+}
+.section_footer footer .footer_trademark {
+  grid-area: trademark;
+  justify-self: end;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #B3B3BA;
+}
+@media screen and (max-width: 674px) {
+  .section_footer footer .footer_trademark {
+    margin: 30px auto;
+  }
+}
+.section_footer footer .footer_contacts_other {
+  grid-area: contacts;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 674px) {
+  .section_footer footer .footer_contacts_other {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.section_footer footer .footer_contacts_other .social_media_icon {
+  display: block;
+  width: 38px;
+  height: 38px;
+  color: #24A3FF;
+  transition: 0.3s ease-in;
+}
+.section_footer footer .footer_contacts_other .social_media_icon:hover {
+  color: #F0145A;
+}
+.section_footer footer .footer_contacts_other p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #46466E;
+}
+.section_footer footer .footer_contacts_other a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #24A3FF;
+}
+
 /*# sourceMappingURL=styles.css.map */
