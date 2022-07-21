@@ -1,18 +1,9 @@
 @import "reset";
 @import "variables";
 @import "practice";
+@import 'header';
 
-@mixin button {
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: transparent;
-
-}
-
-.wrapper_section_header {
+.section_top {
   max-width: 1920px;
   margin: 0 auto;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -20,295 +11,51 @@
   border-bottom-right-radius: 12px;
   overflow: hidden;
 
-  .header {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 50px 160px 0;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-    "logo contacts"
-    "logo nav";
+  .wrapper_header {
+    height: 100vh;
     position: relative;
-    z-index: 5;
 
-    @media screen and (max-width: 1440px) {
-      padding: 50px 60px 0;
-    }
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas: "contacts" "logo" "nav";
-      justify-items: start;
-      row-gap: 30px;
-    }
-    @media screen and (max-width: 588px) {
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto;
-      justify-items: unset;
-      gap: 0;
-      grid-template-areas:
-      "contacts contacts"
-      "logo nav";
-      padding: 0;
+    .top_background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("../images/icons/Symbol.svg") no-repeat fixed center;
+      background-size: 88vh;
     }
 
+    .top_slogan {
+      font-weight: $font-bold;
+      font-size: 38px;
+      color: $basic-white;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: fit-content;
+      padding: 60px 0;
+    }
+
+    button {
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background: transparent;
+      color: $basic-white;
+      transition: 0.3s;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
   }
 }
-    .wrapper_logo {
-      display: flex;
-      padding: 3px 0;
-      grid-area: logo;
-      @media screen and (max-width: 768px) {
-        padding: 0;
-      }
-      @media screen and (max-width: 588px) {
-        padding-left: 15px;
-      }
-
-      .header_logo {
-        width: 130px;
-        height: 60px;
-        background: url("../images/Logo_white.png") no-repeat center;
-
-        @media screen and (max-width: 588px) {
-          width: 69px;
-          height: 32px;
-          margin: 15px 0 10px 0;
-          background-size: contain;
-        }
-      }
-    }
-
-    .contacts {
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      grid-area: contacts;
-      @media screen and (max-width: 588px) {
-        width: 100%;
-        justify-content: space-between;
-        padding: 10px 15px;
-        background: rgba(245, 245, 250, 0.2);
-
-      }
-
-
-      .wrapper_languages {
-        a {
-          width: 33px;
-          height: 25px;
-          padding: 5px 7px;
-          display: inline-block;
-          font-weight: $font-bold;
-          font-size: 12px;
-          line-height: 14.63px;
-          text-align: center;
-          color: $basic-white;
-          border-radius: 8px;
-          letter-spacing: 1px;
-          &:hover {
-            background: rgba(255, 255, 255, 0.2);
-          }
-        }
-
-        a:nth-child(3) {
-          background: $color-accent;
-          color: #F5F5FA;
-        }
-      }
-
-      .separate {
-        width: 6px;
-        height: 6px;
-        background: $color-grey-separator no-repeat center;
-        border-radius: 50%;
-        margin: 9.5px 6px;
-        @media screen and (max-width: 588px) {
-          display: none;
-        }
-      }
-
-      p {
-        font-weight: $font-regular;
-        font-size: 16px;
-        color: $basic-white;
-        text-align: center;
-        @media screen and (max-width: 608px) {
-          display: none;
-        }
-      }
-
-      a {
-        font-weight: $font-bold;
-        font-size: 16px;
-        line-height: 20px;
-        color: $basic-white;
-
-      }
-
-      .social_media_icon {
-        @media screen and (max-width: 588px) {
-          display: none;
-        }
-      }
-
-      .social_media_icon svg {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        color: $basic-white ;
-        transition: 0.3s ease-in;
-        @media screen and (max-width: 588px) {
-          display: none;
-        }
-
-        &:hover {
-          color: $color-accent;
-        }
-      }
-    }
-
-    nav {
-      align-self: end;
-      grid-area: nav;
-
-      @media screen and (max-width: 588px) {
-        display: none;
-      }
-    }
-
-      nav ul {
-      display: flex;
-      gap: 15px;
-      justify-content: end;
-
-      a {
-        padding: 3px 0;
-        cursor: pointer;
-        font-weight: $font-bold;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        color: $basic-white;
-        position: relative;
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          right: 0;
-          bottom: -3px;
-          width: 0;
-          height: 2px;
-          background-color: $color-accent;
-          transition: 0.7s;
-        }
-        &:hover:after {
-          content: "";
-          width: 100%;
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: -3px;
-          height: 2px;
-          background-color: $basic-white;
-          transition: 0.7s;
-        }
-      }
-    }
-
-    .burger {
-      display: none;
-      @media screen and (max-width: 588px) {
-        display: block;
-        grid-area: nav;
-        justify-self: end;
-        align-self: center;
-        margin-right: 15px;
-      }
-
-    }
-
-
-    .wrapper_logo_big {
-      width: 872px;
-      height: 1000px;
-      margin: -116px auto 0;
-      padding: 0 30px 30px 30px;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "." 'text' 'button';
-      align-items: center;
-      justify-items: center;
-      position: relative;
-
-      @media screen and (max-width: 1440px) {
-        width: 697px;
-        height: 799px;
-      }
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-        height: 768px;
-      }
-
-      @media screen and (max-width: 768px) {
-        height: 1024px;
-        margin-top: -219px;
-      }
-      @media screen and (max-width: 588px) {
-        width: 100%;
-        height: 600px;
-        margin-top: -102px;
-      }
-
-      .logo_big {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url("../images/icons/Symbol.svg") center no-repeat;
-        background-size: contain;
-        @media screen and (max-width: 768px) {
-          background-size: cover;
-          width: 893px;
-        }
-
-        @media screen and (max-width: 588px) {
-          background-attachment: unset;
-          width: 100%;
-        }
-      }
-      p {
-        font-weight: $font-bold;
-        font-size: 38px;
-        text-align: center;
-        grid-area: text;
-        color: $basic-white;
-        z-index: 0;
-
-        @media screen and (max-width: 588px) {
-          padding: 0 80px;
-        }
-        @media screen and (max-width: 375px) {
-          padding: 0;
-        }
-      }
-
-      button {
-        @include button;
-        grid-area: button;
-        align-self: end;
-        z-index: 10;
-        color: $basic-white;
-        transition: 0.3s;
-
-        &:hover {
-          color: $color-accent;
-        }
-      }
-    }
-
     .wrapper_experience {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -341,7 +88,6 @@
         border-right: 4px solid rgba(255, 255, 255, 0.3);
 
         @media screen and (max-width: 970px) {
-          grid-rows: 1 / span 1;
           grid-column: 1 / span 1;
           border-right: none;
           flex-direction: row;
@@ -379,7 +125,6 @@
         align-self: center;
 
         @media screen and (max-width: 970px) {
-          grid-rows: 2 / span 1;
           grid-column: 1 / span 1;
           padding-top: 60px;
           padding-left: 0;
@@ -440,21 +185,6 @@
     grid-area: title;
     @include title;
 
-    h2 {
-      font-size: 38px;
-      font-weight: $font-bold;
-      line-height: 46px;
-      text-align: left;
-      background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      padding-top: 10px;
-
-      @media screen and (max-width: 588px) {
-       font-size: 30px;
-       line-height: 36.57px;
-      }
-    }
   }
   .practice_it {
     grid-area: it;
