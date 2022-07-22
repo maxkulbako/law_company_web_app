@@ -12,7 +12,7 @@
   position: relative;
   z-index: 5;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 956px) {
     grid-template-areas: "contacts" "logo" "nav";
     justify-items: start;
     row-gap: 30px;
@@ -31,7 +31,7 @@
     display: flex;
     padding-bottom: 6px;
     grid-area: logo;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 956px) {
       padding: 0;
     }
     @media screen and (max-width: 588px) {
@@ -97,7 +97,7 @@
       height: 6px;
       background: $color-grey-separator no-repeat center;
       border-radius: 50%;
-      margin: 9.5px 6px;
+      margin: 0 6px;
       @media screen and (max-width: 588px) {
         display: none;
       }
@@ -204,3 +204,103 @@
 
   }
 }
+
+.header_white {
+  @extend .header;
+
+  .wrapper_logo {
+    .header_logo {
+      background: url("../images/Logo.png") no-repeat center;
+      background-size: contain;
+    }
+    .slash {
+      width: 21px;
+      height: 47px;
+      background: url("../images/Slash.png") center no-repeat;
+      margin: 0 4px;
+      @media screen and (max-width: 588px) {
+        width: 11.62px;
+        height: 26px;
+        margin: 15px 4px 18px 4px;
+        background-size: contain;
+      }
+    }
+    p {
+      font-size: 36px;
+      font-weight: $font-regular;
+      line-height: 44px;
+      color: $color-main-regular;
+      @media screen and (max-width: 588px) {
+        font-size: 20px;
+        line-height: 24.38px;
+        padding: 15px 0 18px 0;
+      }
+    }
+  }
+ .contacts {
+   .wrapper_languages {
+
+     a {
+       color: $color-grey-text;
+
+       &:hover {
+         background: $color-grey-bg;
+       }
+     }
+
+     a:nth-child(3) {
+       background: $color-accent;
+       color: #F5F5FA;
+     }
+   }
+
+   p {
+     color: $color-grey-text;
+   }
+
+   a {
+     color: $color-grey-text;
+   }
+
+   .social_media_icon svg {
+     color: $color-grey-text;
+   }
+ }
+  nav {
+    align-self: end;
+    grid-area: nav;
+
+    @media screen and (max-width: 588px) {
+      display: none;
+    }
+  }
+
+  nav ul {
+
+    a {
+      color: $color-active-regular;
+      &:after {
+        background-color: $color-accent;
+      }
+
+      &:hover:after {
+        background-color: $color-active-regular;
+      }
+    }
+  .selected {
+  color: $color-accent;
+    &:after {
+      width: 100%;
+      background-color: $color-accent;
+
+    }
+      &:hover:after {
+        background-color: $color-accent;
+      }
+    }
+  }
+
+  }
+  .burger {
+    color: $color-main-regular;
+  }
