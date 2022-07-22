@@ -13,6 +13,20 @@ $basic-white: rgba(255, 255, 255, 1);
 $font-regular: 400;
 $font-bold: 700;
 
+
+@mixin red_gradient {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin H_title {
+  @include red_gradient;
+  font-size: 38px;
+  font-weight: $font-bold;
+  line-height: 46px;
+}
+
 @mixin title {
   a {
     font-size: 14px;

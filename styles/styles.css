@@ -4,7 +4,7 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
-  font-family: "Montserat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header, .header_white {
@@ -95,7 +95,7 @@
 }
 .header .contacts .wrapper_languages a:nth-child(3), .header_white .contacts .wrapper_languages a:nth-child(3) {
   background: #F0145A;
-  color: #F5F5FA;
+  color: #FFFFFF;
 }
 .header .contacts .separate, .header_white .contacts .separate {
   width: 6px;
