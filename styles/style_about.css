@@ -1,4 +1,4 @@
-.section_intro {
+.section_intro, .section_about {
   max-width: 1600px;
   margin: 60px auto;
   width: calc(100% - 120px);
@@ -7,24 +7,24 @@
   gap: 30px;
 }
 @media screen and (max-width: 1440px) {
-  .section_intro {
+  .section_intro, .section_about {
     max-width: 1080px;
     padding: 0;
   }
 }
 @media screen and (max-width: 958px) {
-  .section_intro {
+  .section_intro, .section_about {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 588px) {
-  .section_intro {
+  .section_intro, .section_about {
     width: 100%;
     margin: 0;
     padding: 30px;
   }
 }
-.section_intro .intro_text H2 {
+.section_intro .intro_text H2, .section_about .intro_text H2 {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -33,21 +33,21 @@
   line-height: 46px;
 }
 @media screen and (max-width: 588px) {
-  .section_intro .intro_text H2 {
+  .section_intro .intro_text H2, .section_about .intro_text H2 {
     font-size: 30px;
     line-height: 36px;
   }
 }
-.section_intro .intro_text p {
+.section_intro .intro_text p, .section_about .intro_text p {
   margin-top: 28px;
   font-size: 19px;
   font-weight: 400;
   line-height: 30px;
 }
-.section_intro .intro_text p:first-child {
+.section_intro .intro_text p:first-child, .section_about .intro_text p:first-child {
   margin-bottom: 30px;
 }
-.section_intro .intro_advantages {
+.section_intro .intro_advantages, .section_about .intro_advantages {
   width: 388px;
   height: fit-content;
   padding-left: 30px;
@@ -57,7 +57,7 @@
   gap: 40px;
   flex-shrink: 0;
 }
-.section_intro .intro_advantages .advantages {
+.section_intro .intro_advantages .advantages, .section_about .intro_advantages .advantages {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -69,7 +69,7 @@
   padding-left: 40px;
   margin-bottom: 10px;
 }
-.section_intro .intro_advantages .advantages:before {
+.section_intro .intro_advantages .advantages:before, .section_about .intro_advantages .advantages:before {
   content: "";
   position: absolute;
   width: 32px;
@@ -79,16 +79,16 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.section_intro .intro_advantages .heading_1:before {
+.section_intro .intro_advantages .heading_1:before, .section_about .intro_advantages .heading_1:before {
   background: url("../images/about/icon_flag.svg") center no-repeat;
 }
-.section_intro .intro_advantages .heading_2:before {
+.section_intro .intro_advantages .heading_2:before, .section_about .intro_advantages .heading_2:before {
   background: url("../images/about/icon_case.svg") center no-repeat;
 }
-.section_intro .intro_advantages .heading_3:before {
+.section_intro .intro_advantages .heading_3:before, .section_about .intro_advantages .heading_3:before {
   background: url("../images/about/icon_star.svg") center no-repeat;
 }
-.section_intro .intro_advantages p {
+.section_intro .intro_advantages p, .section_about .intro_advantages p {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -136,6 +136,47 @@
     font-size: 36px;
     line-height: 43px;
     letter-spacing: 13px;
+  }
+}
+
+.section_about {
+  gap: 60px;
+}
+@media screen and (max-width: 958px) {
+  .section_about {
+    gap: 30px;
+  }
+}
+.section_about .about_text p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.section_about .about_text p:last-child {
+  margin-bottom: 0;
+}
+.section_about .about_title {
+  width: 362px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 958px) {
+  .section_about .about_title {
+    width: 100%;
+  }
+}
+.section_about .about_title h2 {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}
+@media screen and (max-width: 588px) {
+  .section_about .about_title h2 {
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 
