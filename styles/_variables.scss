@@ -89,3 +89,23 @@ $font-bold: 700;
   }
 
 }
+
+@mixin paginator {
+  margin: 30px auto 0;
+  width: fit-content;
+
+  .paginator {
+    width: 16px;
+    height: 16px;
+    background-color: $color-active-regular;
+    border-radius: 50%;
+    display: inline-block;
+
+    &:nth-child(2) {
+      margin: 0 15px;
+    }
+    &:nth-child(1n+2) {
+      opacity: 20%;
+    }
+  }
+}
