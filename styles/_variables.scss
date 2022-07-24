@@ -25,6 +25,10 @@ $font-bold: 700;
   font-size: 38px;
   font-weight: $font-bold;
   line-height: 46px;
+  @media screen and (max-width: 588px) {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
 }
 
 @mixin title {
@@ -38,6 +42,7 @@ $font-bold: 700;
     padding-right: 14px;
     position: relative;
     cursor: pointer;
+    transition: 0.3s;
 
     svg {
       position: absolute;
@@ -50,19 +55,8 @@ $font-bold: 700;
   }
 
   h2 {
-    font-size: 38px;
-    font-weight: $font-bold;
-    line-height: 46px;
-    text-align: left;
-    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    @include H_title;
     padding-top: 10px;
-
-    @media screen and (max-width: 588px) {
-      font-size: 30px;
-      line-height: 36.57px;
-    }
   }
 }
 
@@ -100,12 +94,17 @@ $font-bold: 700;
     background-color: $color-active-regular;
     border-radius: 50%;
     display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease-in;
 
     &:nth-child(2) {
       margin: 0 15px;
     }
     &:nth-child(1n+2) {
       opacity: 20%;
+      &:hover {
+        opacity: 60%;
+      }
     }
   }
 }

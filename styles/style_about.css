@@ -35,6 +35,12 @@
 @media screen and (max-width: 588px) {
   .section_intro .intro_text H2, .section_about .intro_text H2 {
     font-size: 30px;
+    line-height: 36.57px;
+  }
+}
+@media screen and (max-width: 588px) {
+  .section_intro .intro_text H2, .section_about .intro_text H2 {
+    font-size: 30px;
     line-height: 36px;
   }
 }
@@ -69,6 +75,12 @@
   padding-left: 40px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 588px) {
+  .section_intro .intro_advantages .advantages, .section_about .intro_advantages .advantages {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
 .section_intro .intro_advantages .advantages:before, .section_about .intro_advantages .advantages:before {
   content: "";
   position: absolute;
@@ -102,6 +114,7 @@
 .section_cover img {
   width: 100%;
   height: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .section_cover p {
   position: absolute;
@@ -176,6 +189,12 @@
 @media screen and (max-width: 588px) {
   .section_about .about_title h2 {
     font-size: 30px;
+    line-height: 36.57px;
+  }
+}
+@media screen and (max-width: 588px) {
+  .section_about .about_title h2 {
+    font-size: 30px;
     line-height: 37px;
   }
 }
@@ -242,12 +261,17 @@
   background-color: #24A3FF;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }
 .section_achievements .section_achievements_wrapper .team_paginator .paginator:nth-child(2) {
   margin: 0 15px;
 }
 .section_achievements .section_achievements_wrapper .team_paginator .paginator:nth-child(1n+2) {
   opacity: 20%;
+}
+.section_achievements .section_achievements_wrapper .team_paginator .paginator:nth-child(1n+2):hover {
+  opacity: 60%;
 }
 .section_achievements .section_achievements_wrapper .team_paginator .paginator:nth-child(1n+4) {
   margin-left: 15px;
