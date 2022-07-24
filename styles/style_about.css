@@ -28,6 +28,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -67,6 +68,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -182,6 +184,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;

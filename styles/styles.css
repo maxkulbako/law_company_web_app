@@ -15,7 +15,6 @@
   display: grid;
   grid-template-areas: "logo contacts" "logo nav";
   position: relative;
-  z-index: 5;
 }
 @media screen and (max-width: 956px) {
   .header, .header_white {
@@ -457,6 +456,7 @@
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   overflow: hidden;
+  padding-bottom: 60px;
 }
 .section_top .wrapper_header {
   height: 100vh;
@@ -479,7 +479,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
-  padding: 60px 0;
 }
 .section_top .wrapper_header button {
   width: 45px;
@@ -506,7 +505,7 @@
   width: calc(100% - 120px);
   padding: 0 120px;
   max-width: 1600px;
-  margin: 60px auto 0;
+  margin: 60px auto;
 }
 @media screen and (max-width: 1440px) {
   .wrapper_experience {
@@ -534,6 +533,7 @@
   gap: 30px;
   padding: 14.5px 60px 14.5px 0;
   border-right: 4px solid rgba(255, 255, 255, 0.3);
+  align-items: end;
 }
 @media screen and (max-width: 970px) {
   .wrapper_experience .wrapper_experience_list {
@@ -549,6 +549,7 @@
   }
 }
 .wrapper_experience .wrapper_experience_list p {
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -612,13 +613,12 @@
   max-width: 1600px;
   margin: 0 auto;
   width: calc(100% - 120px);
-  padding: 60px 0;
   display: grid;
   row-gap: 60px;
   column-gap: 60px;
   grid-template-areas: "title title title" "it daily corporate" "contractual protection judicial";
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .wrapper_practice {
     grid-template-areas: "title title " "it daily" "corporate contractual" "protection judicial";
   }
@@ -658,6 +658,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -753,7 +754,7 @@
   width: calc(100% - 120px);
   margin: 60px auto;
 }
-@media screen and (max-width: 948px) {
+@media screen and (max-width: 958px) {
   .section_team {
     margin-top: 0;
   }
@@ -824,6 +825,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -877,7 +879,7 @@
 .section_clients {
   margin: 60px 0;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
   .section_clients {
     margin-bottom: 0;
   }
@@ -1052,6 +1054,11 @@
 }
 @media screen and (max-width: 1000px) {
   .section_publications .wrapper_publications {
+    grid-template-areas: "public_title public_title" "public_1 public_2" "public_3 public_3";
+  }
+}
+@media screen and (max-width: 790px) {
+  .section_publications .wrapper_publications {
     grid-template-areas: "public_title" "public_1" "public_2" "public_3";
   }
 }
@@ -1096,6 +1103,7 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  width: fit-content;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
