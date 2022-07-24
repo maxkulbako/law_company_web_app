@@ -1,0 +1,102 @@
+@import "variables";
+
+
+@mixin width_desktop_hd {
+  max-width: 1600px;
+  width: calc(100% - 120px);
+}
+
+@mixin red_gradient {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin H_title {
+  @include red_gradient;
+  font-size: 38px;
+  font-weight: $font-bold;
+  line-height: 46px;
+  @media screen and (max-width: 588px) {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
+
+@mixin title {
+  a {
+    font-size: 14px;
+    font-weight: $font-bold;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active-regular;
+    padding-right: 14px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+
+    svg {
+      position: absolute;
+      top: 1px;
+      right: 0;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  h2 {
+    @include H_title;
+    padding-top: 10px;
+  }
+}
+
+@mixin social_media {
+  .social_media_icon {
+    @media screen and (max-width: 588px) {
+      display: none;
+    }
+  }
+
+  .social_media_icon svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: $basic-white ;
+    transition: 0.3s ease-in;
+    @media screen and (max-width: 588px) {
+      display: none;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+}
+
+@mixin paginator {
+  margin: 30px auto 0;
+  width: fit-content;
+
+  .paginator {
+    width: 16px;
+    height: 16px;
+    background-color: $color-active-regular;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+
+    &:nth-child(2) {
+      margin: 0 15px;
+    }
+    &:nth-child(1n+2) {
+      opacity: 20%;
+      &:hover {
+        opacity: 60%;
+      }
+    }
+  }
+}
