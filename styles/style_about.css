@@ -228,6 +228,10 @@
   width: 100%;
   padding: 25px 0;
   border-radius: 12px;
+  cursor: pointer;
+}
+.section_achievements .section_achievements_wrapper .wrapper_achievements .achievements:hover {
+  box-shadow: 0 15px 30px #cfd7e4;
 }
 @media screen and (max-width: 988px) {
   .section_achievements .section_achievements_wrapper .wrapper_achievements .achievements {
