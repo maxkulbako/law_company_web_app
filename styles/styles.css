@@ -202,6 +202,7 @@
     align-self: center;
     margin-right: 15px;
     border-radius: 8px;
+    cursor: pointer;
   }
 }
 .header .burger:hover, .header_white .burger:hover {

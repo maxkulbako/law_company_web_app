@@ -1,0 +1,179 @@
+@import "variables";
+@import "reset";
+@import "mixin";
+@import "header";
+@import "footer";
+
+.wrapper_page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.section_form {
+  @include width_desktop_hd;
+  margin: 60px auto;
+  padding: 0 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 60px;
+  @media screen and (max-width: 1440px) {
+    max-width: 1080px;
+    padding: 0;
+  }
+  @media screen and (max-width: 968px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+  }
+  @media screen and (max-width: 968px) {
+    width: calc(100vw - 60px);
+    margin: 30px auto;
+    gap: 30px;
+  }
+}
+
+.form_wrapper_contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  p {
+  &:first-child {
+    font-size: 21px;
+    font-weight: $font-regular;
+    line-height: 30px;
+    color: $color_main-regular;
+  }
+  }
+  .separate_line {
+    width: 100%;
+    height: 4px;
+    background: $color-grey-separator;
+  }
+
+  .tel_mail {
+    .contacts_tel {
+      font-size: 21px;
+      font-weight: $font-regular;
+      line-height: 30px;
+      color: $color-main-alt;
+      margin-bottom: 15px;
+    }
+    .contacts_mail {
+      font-size: 21px;
+      font-weight: $font-regular;
+      line-height: 30px;
+      color: $color_active-regular;
+      transition: 0.3s;
+
+      &:hover {
+        color: $color_accent;
+      }
+    }
+
+  }
+
+  .contacts_social_media {
+    color: $color_active_regular;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+      color: $color_accent;
+    }
+    svg {
+      display: inline-block;
+    }
+    p {
+      display: inline-block;
+      width: fit-content;
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: $font-bold;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 5px;
+    }
+  }
+
+}
+
+.wrapper_form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: $color-grey-bg;
+    gap: 30px;
+    border-radius: 12px;
+
+    h1 {
+      @include red_gradient;
+      width: fit-content;
+      font-size: 30px;
+      line-height: 36.57px;
+      font-weight: $font-bold;
+    }
+
+    .form_about, .message, .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+  .contacts {
+    h3 {
+      font-size: 14px;
+      font-weight: $font-bold;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color_grey-text;
+    }
+  }
+
+    .form_input {
+      @include input;
+    }
+
+    .form_text_area {
+      @include input;
+      textarea {
+        height: 130px;
+        padding: 15px 100px 15px 15px;
+      }
+    }
+
+    .button {
+      align-self: center;
+      width: 100%;
+
+
+      button {
+        width: 100%;
+        display: block;
+        padding: 18px 0;
+        background: $color_active-regular;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+        transition: 0.3s ease-in;
+
+        &:hover {
+          background-color: #0085FF;
+        }
+      }
+
+    }
+
+  }
+
+.section_footer_other {
+  margin-top: auto;
+}

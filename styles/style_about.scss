@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixin";
+@import "reset";
 
 .section_intro {
   @include width_desktop_hd;
@@ -94,8 +95,11 @@
 }
 
 .section_cover {
+  max-width: 1920px;
   width: 100vw;
+  margin: 0 auto;
   position: relative;
+
   img {
     width: 100%;
     height: 100%;
