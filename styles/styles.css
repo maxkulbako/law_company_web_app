@@ -612,8 +612,8 @@
 
 .wrapper_practice {
   max-width: 1600px;
-  margin: 0 auto;
   width: calc(100% - 120px);
+  margin: 0 auto;
   display: grid;
   row-gap: 60px;
   column-gap: 60px;
@@ -671,57 +671,59 @@
     line-height: 36.57px;
   }
 }
-.wrapper_practice .practice_it, .wrapper_practice .practice_judicial, .wrapper_practice .practice_protection, .wrapper_practice .practice_contractual, .wrapper_practice .practice_corporate, .wrapper_practice .practice_daily {
-  grid-area: it;
-}
-.wrapper_practice .practice_it div, .wrapper_practice .practice_judicial div, .wrapper_practice .practice_protection div, .wrapper_practice .practice_contractual div, .wrapper_practice .practice_corporate div, .wrapper_practice .practice_daily div {
+.wrapper_practice .practice div {
   width: 92px;
   height: 92px;
-  background: url("../images/icons/Icon_it.svg") rgb(255, 255, 255);
   border-radius: 24px;
 }
-.wrapper_practice .practice_it h4, .wrapper_practice .practice_judicial h4, .wrapper_practice .practice_protection h4, .wrapper_practice .practice_contractual h4, .wrapper_practice .practice_corporate h4, .wrapper_practice .practice_daily h4 {
+.wrapper_practice .practice h4 {
   font-size: 22px;
   font-weight: 700;
   line-height: 27px;
   color: #24A3FF;
   padding-top: 30px;
 }
-.wrapper_practice .practice_it p, .wrapper_practice .practice_judicial p, .wrapper_practice .practice_protection p, .wrapper_practice .practice_contractual p, .wrapper_practice .practice_corporate p, .wrapper_practice .practice_daily p {
+.wrapper_practice .practice p {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   padding-top: 15px;
   color: rgb(255, 255, 255);
 }
-.wrapper_practice .practice_daily {
+.wrapper_practice .it {
+  grid-area: it;
+}
+.wrapper_practice .it div {
+  background: url("../images/icons/Icon_it.svg") rgb(255, 255, 255);
+}
+.wrapper_practice .daily {
   grid-area: daily;
 }
-.wrapper_practice .practice_daily div {
+.wrapper_practice .daily div {
   background: url("../images/icons/Icon_daily.svg") rgb(255, 255, 255) center no-repeat;
 }
-.wrapper_practice .practice_corporate {
+.wrapper_practice .corporate {
   grid-area: corporate;
 }
-.wrapper_practice .practice_corporate div {
+.wrapper_practice .corporate div {
   background: url("../images/icons/Icon_coprorate.png") rgb(255, 255, 255) center no-repeat;
 }
-.wrapper_practice .practice_contractual {
+.wrapper_practice .contractual {
   grid-area: contractual;
 }
-.wrapper_practice .practice_contractual div {
+.wrapper_practice .contractual div {
   background: url("../images/icons/Icon_trust.png") rgb(255, 255, 255) center no-repeat;
 }
-.wrapper_practice .practice_protection {
+.wrapper_practice .protection {
   grid-area: protection;
 }
-.wrapper_practice .practice_protection div {
+.wrapper_practice .protection div {
   background: url("../images/icons/Icon_protection.png") rgb(255, 255, 255) center no-repeat;
 }
-.wrapper_practice .practice_judicial {
+.wrapper_practice .judicial {
   grid-area: judicial;
 }
-.wrapper_practice .practice_judicial div {
+.wrapper_practice .judicial div {
   background: url("../images/icons/Icon_court.png") rgb(255, 255, 255) center no-repeat;
 }
 
