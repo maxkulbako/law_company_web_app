@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/style_contact.css">
+    <link rel="stylesheet" href="/law_company_web_app/styles/styles.css">
+    <link rel="stylesheet" href="/law_company_web_app/styles/style_about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <title>Contact</title>
+    <title>About Us</title>
 </head>
 <body>
-<div class="wrapper_page">
 <header class="header_white">
     <div class="wrapper_logo">
-        <a href="../pages/index.html" class="header_logo"></a>
+        <a href="/law_company_web_app" class="header_logo"></a>
         <div class="slash"></div>
-        <p>contact</p>
+        <p>about us</p>
     </div>
     <div class="contacts">
         <div class="wrapper_languages">
@@ -40,19 +38,19 @@
     <nav>
         <ul>
             <li>
-                <a href="../pages/about.html">about us</a>
+                <a class="selected" href="#">about us</a>
             </li>
             <li>
                 <a href="#">services</a>
             </li>
             <li>
-                <a href="../pages/team.html">team</a>
+                <a href="/law_company_web_app/team">team</a>
             </li>
             <li>
                 <a href="#">publications</a>
             </li>
             <li>
-                <a class="selected" href="../pages/contact.html">contact</a>
+                <a href="/law_company_web_app/contact">contact</a>
             </li>
         </ul>
     </nav>
@@ -65,59 +63,78 @@
     </div>
 </header>
 
-<div class="section_form">
-    <div class="form_wrapper_contacts">
-        <p>Kyiv, <br>
-            Mechnikovastr, 14</p>
-        <div class="separate_line"></div>
-        <div class="tel_mail">
-        <p class="contacts_tel">0800 211 927</p>
-        <a class="contacts_mail" href="#">contact@forstudy.space</a>
-        </div>
-        <div class="separate_line"></div>
-        <a class="contacts_social_media" href="#">
-            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_22724_6600)">
-                    <path d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" fill="currentColor"/>
-                </g>
-                <defs>
-                    <clipPath id="clip0_22724_6600">
-                        <rect width="38" height="38" fill="white"/>
-                    </clipPath>
-                </defs>
-            </svg>
-            <p> Our page <br>on facebook</p>
-        </a>
+<div class="section_intro">
+    <div class="intro_text">
+        <h2>We turn over the idea of legal services</h2>
+        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and
+            achieve the adoption of a number of decisions that are important for the industry. Many people form the
+            practice of applying the law of the sea in Ukraine.</p>
+        <p>HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms, the
+            trust of large Ukrainian and international companies, and the recognition of professional ratings.</p>
     </div>
-    <form action="https://fom.in.ua/echo" method="get" class="wrapper_form">
-        <h1>We would like to help you</h1>
-        <div class="form_about">
-            <div class="form_input">
-                <input type="text" name="name" id="name" required>
-                <label for="name">Name</label>
-            </div>
-            <div class="form_text_area">
-                <textarea name="message" id="message" required></textarea>
-                <label for="message">Message</label>
-            </div>
+    <div class="intro_advantages">
+        <div>
+            <div class="advantages heading_1">10+</div>
+            <p>years of relevant experience</p>
         </div>
-
-        <div class="contacts">
-            <h3>How to answer you?</h3>
-            <div class="form_input">
-                <input type="text" name="phone_number" id="phone_number" required>
-                <label for="phone_number">Phone Number</label>
-            </div>
-            <div class="form_input">
-                <input type="email" name="mail" id="mail" required>
-                <label for="mail">Email</label>
-
-            </div>
+        <div>
+            <div class="advantages heading_2">30+</div>
+            <p>active clients who entrust us with their orders on a monthly basis</p>
         </div>
-        <div class="button">
-            <button type="submit">Send Message</button>
+        <div>
+            <div class="advantages heading_3">500+</div>
+            <p>hours of pro bono work annually</p>
         </div>
-    </form>
+    </div>
+</div>
+<div class="section_cover">
+    <img src="../images/home/Team.png" alt="">
+    <p>TEA<span>M</span></p>
+</div>
+<div class="section_about">
+    <div class="about_text">
+        <p>CThe historically unchanged legal profession has begun to reformat in recent years. Clients are feeling this,
+            but law firms are still resisting evolution. Clients need convenience, simplicity, transparent payment.
+            Google, IBM WatsOn, Symantec Clearwell prove that the technological revolution in legal services has begun
+            and is imminent.
+        </p>
+        <p>Quality is what we care about the most.
+        </p>
+        <p>It's simple. If you are unhappy with our work, we will refund your money. We trust our clients. And we want
+            our clients to trust us too.
+        </p>
+    </div>
+    <div class="about_title">
+        <h2>
+            Quality is what we care about the most.
+        </h2>
+    </div>
+</div>
+<div class="section_achievements">
+    <div class="section_achievements_wrapper">
+        <h3>ACHIEVEMENTS</h3>
+        <div class="wrapper_achievements">
+            <a class="achievements">
+                <img src="../images/about/Achievment-1.png" alt="#">
+            </a>
+            <a class="achievements">
+                <img src="../images/about/Achievment-2.png" alt="#">
+            </a>
+            <a class="achievements">
+                <img src="../images/about/Achievment-3.png" alt="#">
+            </a>
+            <a class="achievements">
+                <img src="../images/about/Achievment-4.png" alt="#">
+            </a>
+        </div>
+         <div class="team_paginator">
+            <div class="paginator"></div>
+            <div class="paginator"></div>
+            <div class="paginator"></div>
+            <div class="paginator"></div>
+            <div class="paginator"></div>
+         </div>
+    </div>
 </div>
 <div class="section_footer_other">
     <footer>
@@ -146,7 +163,6 @@
             <p>© 2021 HLEGAL Law company, LLC</p>
         </div>
     </footer>
-    </div>
 </div>
 </body>
 </html>
